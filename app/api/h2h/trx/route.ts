@@ -4,6 +4,7 @@ import { logger } from '@/lib/logger';
 import { sendH2HTransaction, generateH2HSignature } from '@/lib/h2h';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 const schema = z.object({
   product: z.string().min(1, 'product wajib diisi (contoh: sp2)'),

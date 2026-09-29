@@ -3,6 +3,7 @@ import { logger } from '@/lib/logger';
 import { getCategories } from '@/lib/product';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 export async function GET(req: NextRequest) {
   try {
