@@ -61,6 +61,8 @@ export async function settleTransaction(
           AND t.amount = ${amountStr}
           AND t.status = 'pending'
           AND (t.expired_at IS NULL OR t.expired_at > ${now.toISOString()})
+          AND t.created_at <= (${settledAt.toISOString()}::timestamptz + INTERVAL '3 minutes')
+          AND ${settledAt.toISOString()}::timestamptz >= (t.created_at - INTERVAL '3 minutes')
           AND (
             NOT EXISTS (SELECT 1 FROM target_user)
             OR t.user_id = (SELECT id FROM target_user)

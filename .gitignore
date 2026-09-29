@@ -9,3 +9,6 @@ logs
 *.tsbuildinfo
 next-env.d.ts
 c.txt
+
+.vercel
+.env*
