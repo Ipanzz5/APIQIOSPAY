@@ -1,0 +1,40 @@
+{
+  "name": "qris-deposit-api",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "axios": "^1.7.2",
+    "cloudinary": "^2.3.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.45.2",
+    "form-data": "^4.0.0",
+    "next": "^14.2.35",
+    "node-cron": "^4.6.0",
+    "p-retry": "^6.2.0",
+    "qrcode": "^1.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/node-cron": "^3.0.11",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.3",
+    "autoprefixer": "^10.5.2",
+    "drizzle-kit": "^0.31.10",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.5.3"
+  }
+}
